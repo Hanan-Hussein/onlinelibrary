@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fts-config xmlns="http://schemas.haulmont.com/cuba/fts.xsd">
+    <entities>
+        <entity class="ke.hanan.onlinelibrarysystem.entity.Author">
+            <include re=".*"/>
+        </entity>
+        <entity class="ke.hanan.onlinelibrarysystem.entity.Subject">
+            <include re=".*"/>
+        </entity>
+        <entity class="ke.hanan.onlinelibrarysystem.entity.Publisher">
+            <include re=".*"/>
+        </entity>
+        <entity class="ke.hanan.onlinelibrarysystem.entity.Students">
+            <include re=".*"/>
+        </entity>
+        <entity class="ke.hanan.onlinelibrarysystem.entity.Admin">
+            <include re=".*"/>
+        </entity>
+        <entity class="ke.hanan.onlinelibrarysystem.entity.Librarian">
+            <include re=".*"/>
+        </entity>
+        <entity class="ke.hanan.onlinelibrarysystem.entity.Book">
+            <include re=".*"/>
+        </entity>
+        <entity class="ke.hanan.onlinelibrarysystem.entity.JournalArticle">
+            <include re=".*"/>
+        </entity>
+    </entities>
+</fts-config>

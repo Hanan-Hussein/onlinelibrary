@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://schemas.haulmont.com/cuba/rest-services-v2.xsd">
+
+    <service name="onlinelibrarysystem_CreateStudentService">
+        <method name="createStudent">
+            <param name="students" type="ke.hanan.onlinelibrarysystem.entity.Students"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_PublisherService">
+        <method name="createPublisher">
+            <param name="publisher" type="ke.hanan.onlinelibrarysystem.entity.Publisher"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_SubjectService">
+        <method name="createSubject">
+            <param name="subject" type="ke.hanan.onlinelibrarysystem.entity.Subject"/>
+        </method>
+    </service>
+</services>
+
