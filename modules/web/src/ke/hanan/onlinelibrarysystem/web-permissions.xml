@@ -1,3 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <permission-config xmlns="http://schemas.haulmont.com/cuba/permissions.xsd">
+    <specific>
+    <category id="app">
+        <permission id="app.createPublisher"/>
+        <permission id="app.createSubject"/>
+        <permission id="app.deleteSubject"/>
+        <permission id="app.deletePublisher"/>
+        <permission id="app.createBook"/>
+        <permission id="app.deletebook"/>
+        <permission id="app.updatePublisher"/>
+        <permission id="app.disableAdmin"/>
+        <permission id="app.createLibrarian"/>
+        <permission id="app.librarian"/>
+        <permission id="app.deleteLibrarian"/>
+        <permission id="app.createStudent"/>
+        <permission id="app.UpdateStudent"/>
+        <permission id="app.DeleteStudent"/>
+        <permission id="app.CreateAdmin"/>
+        <permission id="app.CreateWorkGroups"/>
+        <permission id="app.DeleteWorkGroups"/>
+        <permission id="app.updateWorkgroups"/>
+        <permission id="app.UpdateSubject"/>
+    </category>
+    </specific>
 </permission-config>
+

@@ -14,6 +14,9 @@ public class Book extends StandardEntity {
     @Column(name = "ISBN")
     private String isbn;
 
+    @Column(name = "AUTHOR_NAME")
+    private String authorName;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SUBJECT_ID")
     private Subject subject;
@@ -33,6 +36,10 @@ public class Book extends StandardEntity {
     @JoinColumn(name = "BOOKFILE_ID")
     private FileDescriptor bookfile;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "BOOK_COVER_ID")
+    private FileDescriptor bookCover;
+
     @Column(name = "BOOK_TITLE")
     private String bookTitle;
 
@@ -41,7 +48,7 @@ public class Book extends StandardEntity {
     private Date year_published;
 
     @Column(name = "EDITION_NUMBER")
-    private Integer editionNumber;
+    private String editionNumber;
 
     @Lob
     @Column(name = "BOOK_SUMMARY")
@@ -50,6 +57,30 @@ public class Book extends StandardEntity {
     @Temporal(TemporalType.DATE)
     @Column(name = "RECIEVE_DATE")
     private Date receiveDate;
+
+    public void setEditionNumber(String editionNumber) {
+        this.editionNumber = editionNumber;
+    }
+
+    public String getEditionNumber() {
+        return editionNumber;
+    }
+
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public FileDescriptor getBookCover() {
+        return bookCover;
+    }
+
+    public void setBookCover(FileDescriptor bookCover) {
+        this.bookCover = bookCover;
+    }
 
     public void setAuthors(Author authors) {
         this.authors = authors;
@@ -105,14 +136,6 @@ public class Book extends StandardEntity {
 
     public void setBookSummary(String bookSummary) {
         this.bookSummary = bookSummary;
-    }
-
-    public Integer getEditionNumber() {
-        return editionNumber;
-    }
-
-    public void setEditionNumber(Integer editionNumber) {
-        this.editionNumber = editionNumber;
     }
 
     public Date getYear_published() {

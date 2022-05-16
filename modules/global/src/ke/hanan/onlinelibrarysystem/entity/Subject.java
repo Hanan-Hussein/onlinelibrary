@@ -3,7 +3,9 @@ package ke.hanan.onlinelibrarysystem.entity;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Table(name = "ONLINELIBRARYSYSTEM_SUBJECT")
 @Entity(name = "onlinelibrarysystem_Subject")
@@ -20,23 +22,12 @@ public class Subject extends StandardEntity {
     @Column(name = "DESCRIPTION")
     private String description;
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "subject")
-    private JournalArticle journalArticle;
-
     public String getCode() {
         return code;
     }
 
     public void setCode(String code) {
         this.code = code;
-    }
-
-    public JournalArticle getJournalArticle() {
-        return journalArticle;
-    }
-
-    public void setJournalArticle(JournalArticle journalArticle) {
-        this.journalArticle = journalArticle;
     }
 
     public String getDescription() {

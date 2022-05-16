@@ -1,4 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
 
+    <view entity="onlinelibrarysystem_Book" name="book-view" extends="_local">
+        <property name="bookfile" view="_minimal"/>
+        <property name="bookCover" view="_minimal"/>
+        <property name="subject" view="_minimal">
+            <property name="subjectName"/>
+        </property>
+        <property name="publisher" view="_minimal">
+            <property name="publisherName"/>
+        </property>
+        <property name="createTs"/>
+    </view>
+    <view entity="onlinelibrarysystem_Otp" name="otp-view" extends="_local">
+        <property name="admin" view="_minimal"/>
+        <property name="librarian" view="_minimal"/>
+    </view>
+    <view entity="onlinelibrarysystem_Students" name="students-view" extends="_local">
+        <property name="createTs"/>
+        <property name="createdBy"/>
+        <property name="updateTs"/>
+        <property name="updatedBy"/>
+    </view>
+    <view entity="onlinelibrarysystem_Subject" name="subject-view" extends="_local">
+        <property name="createTs"/>
+        <property name="createdBy"/>
+        <property name="updateTs"/>
+        <property name="updatedBy"/>
+    </view>
+    <view entity="sec$EntityLog" name="audit-view" extends="_local">
+        <property name="user" view="_minimal"/>
+    </view>
+    <view entity="sec$SessionLogEntry" name="sessionLogEntry-view1" extends="_local">
+        <property name="user" view="_minimal"/>
+        <property name="createTs"/>
+    </view>
+    <view entity="onlinelibrarysystem_Publisher" name="publisher-view" extends="_local">
+        <property name="createTs"/>
+        <property name="createdBy"/>
+    </view>
+    <view entity="onlinelibrarysystem_Librarians" name="librarians-view" extends="_local">
+        <property name="createTs"/>
+        <property name="createdBy"/>
+        <property name="updateTs"/>
+    </view>
+    <view entity="onlinelibrarysystem_WorkGroups" name="work-group-view" extends="_local">
+        <property name="librarians" view="_minimal">
+            <property name="userRoles" view="_minimal">
+                <property name="role" view="_minimal"/>
+                <property name="roleName"/>
+            </property>
+        </property>
+        <property name="admins" view="_minimal"/>
+        <property name="workgroupRoles" view="_minimal">
+            <property name="workGroup" view="_minimal">
+                <property name="description"/>
+                <property name="librarians" view="_minimal"/>
+                <property name="admins" view="_minimal"/>
+                <property name="workgroupRoles" view="_minimal">
+                    <property name="workGroup" view="_minimal"/>
+                    <property name="role"/>
+                </property>
+            </property>
+            <property name="role"/>
+        </property>
+        <property name="createTs"/>
+        <property name="createdBy"/>
+    </view>
+    <view entity="onlinelibrarysystem_Librarians" name="librarian-group-view" extends="_local">
+        <property name="workGroups" view="_minimal">
+            <property name="workgroupRoles" view="_minimal">
+                <property name="workGroup" view="_minimal"/>
+                <property name="role"/>
+            </property>
+        </property>
+        <property name="userRoles" view="_minimal">
+            <property name="user" view="_minimal"/>
+            <property name="role" view="_minimal"/>
+            <property name="roleName"/>
+        </property>
+    </view>
+    <view entity="onlinelibrarysystem_Admin" name="admin-view" extends="_local">
+        <property name="createTs"/>
+        <property name="createdBy"/>
+        <property name="workGroups" view="_minimal">
+            <property name="workgroupRoles" view="_minimal">
+                <property name="role"/>
+            </property>
+        </property>
+        <property name="userRoles" view="_minimal">
+            <property name="role" view="_minimal"/>
+        </property>
+    </view>
 </views>

@@ -16,13 +16,25 @@
         <entity class="ke.hanan.onlinelibrarysystem.entity.Admin">
             <include re=".*"/>
         </entity>
-        <entity class="ke.hanan.onlinelibrarysystem.entity.Librarian">
-            <include re=".*"/>
-        </entity>
         <entity class="ke.hanan.onlinelibrarysystem.entity.Book">
             <include re=".*"/>
         </entity>
         <entity class="ke.hanan.onlinelibrarysystem.entity.JournalArticle">
+            <include re=".*"/>
+        </entity>
+        <entity class="ke.hanan.onlinelibrarysystem.entity.Otp">
+            <include re=".*"/>
+        </entity>
+        <entity class="ke.hanan.onlinelibrarysystem.entity.Librarians">
+            <include re=".*"/>
+        </entity>
+        <entity class="ke.hanan.onlinelibrarysystem.entity.WorkGroups">
+            <include re=".*"/>
+        </entity>
+        <entity class="ke.hanan.onlinelibrarysystem.entity.WorkGroupRoles">
+            <include re=".*"/>
+        </entity>
+        <entity class="ke.hanan.onlinelibrarysystem.entity.BookRequest">
             <include re=".*"/>
         </entity>
     </entities>

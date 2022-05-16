@@ -1,6 +1,5 @@
 package ke.hanan.onlinelibrarysystem.entity;
 
-import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
@@ -8,7 +7,6 @@ import java.util.List;
 
 @Table(name = "ONLINELIBRARYSYSTEM_AUTHOR")
 @Entity(name = "onlinelibrarysystem_Author")
-@NamePattern("%s|lastName")
 public class Author extends StandardEntity {
     private static final long serialVersionUID = -1851160076386668329L;
 
@@ -20,7 +18,7 @@ public class Author extends StandardEntity {
 
     @Column(name = "PHONE_NUMBER")
     private String phoneNumber;
-    
+
     @Column(name = "ADDRESS")
     private String address;
 

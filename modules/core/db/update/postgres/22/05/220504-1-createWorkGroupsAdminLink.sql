@@ -1,0 +1,5 @@
+create table ONLINELIBRARYSYSTEM_WORK_GROUPS_ADMIN_LINK (
+    ADMIN_ID uuid,
+    WORK_GROUPS_ID uuid,
+    primary key (ADMIN_ID, WORK_GROUPS_ID)
+);

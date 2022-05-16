@@ -16,5 +16,87 @@
             <param name="subject" type="ke.hanan.onlinelibrarysystem.entity.Subject"/>
         </method>
     </service>
+    <service name="onlinelibrarysystem_CreateAuthorService">
+        <method name="createAuthor">
+            <param name="author" type="ke.hanan.onlinelibrarysystem.entity.Author"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_CreateAdminService">
+        <method name="createAdmin">
+            <param name="admin" type="ke.hanan.onlinelibrarysystem.entity.Admin"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_CreateMasterDataService">
+        <method name="createPublisher">
+            <param name="publisher" type="ke.hanan.onlinelibrarysystem.entity.Publisher"/>
+        </method>
+        <method name="createSubject">
+            <param name="subject" type="ke.hanan.onlinelibrarysystem.entity.Subject"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_DeleteMasterDataService">
+
+        <method name="DeleteSubject">
+            <param name="disable" type="ke.hanan.onlinelibrarysystem.wrappers.ApproveWrapper"/>
+        </method>
+        <method name="DeletePublisher">
+            <param name="disable" type="ke.hanan.onlinelibrarysystem.wrappers.ApproveWrapper"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_CreateLibrarianService">
+
+        <method name="createLibrarian">
+            <param name="librarians" type="ke.hanan.onlinelibrarysystem.entity.Librarians"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_CreateWorkGroupService">
+        <method name="createWorkGroup">
+            <param name="workGroups" type="ke.hanan.onlinelibrarysystem.entity.WorkGroups"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_DeleteBooksService">
+        <method name="DeleteBooks">
+            <param name="disable" type="ke.hanan.onlinelibrarysystem.wrappers.ApproveWrapper"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_DeleteStudentService">
+        <method name="Student">
+            <param name="disable" type="ke.hanan.onlinelibrarysystem.wrappers.ApproveWrapper"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_DeleteLibrarianService">
+        <method name="DeleteLibrarian">
+            <param name="disable" type="ke.hanan.onlinelibrarysystem.wrappers.ApproveWrapper"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_UserInfoService">
+        <method name="UserInfo"/>
+    </service>
+    <service name="onlinelibrarysystem_CreateBooksService">
+        <method name="createBooks">
+            <param name="book" type="ke.hanan.onlinelibrarysystem.entity.Book"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_CreateBookRequestService">
+
+        <method name="createBookRequest">
+            <param name="request" type="ke.hanan.onlinelibrarysystem.entity.BookRequest"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_DisableUserService">
+        <method name="disableUser">
+            <param name="disable" type="ke.hanan.onlinelibrarysystem.wrappers.ApproveWrapper"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_DeleteWorkGroupService">
+        <method name="WorkGroups">
+            <param name="disable" type="ke.hanan.onlinelibrarysystem.wrappers.ApproveWrapper"/>
+        </method>
+    </service>
+    <service name="onlinelibrarysystem_ChangePasswordService">
+        <method name="ChangePassword">
+            <param name="changePasswordWrapper" type="ke.hanan.onlinelibrarysystem.wrappers.ChangePasswordWrapper"/>
+        </method>
+    </service>
 </services>
 

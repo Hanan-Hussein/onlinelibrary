@@ -3,6 +3,7 @@ package ke.hanan.onlinelibrarysystem.service;
 import com.haulmont.cuba.core.EntityManager;
 import com.haulmont.cuba.core.Persistence;
 import com.haulmont.cuba.core.Transaction;
+import com.haulmont.cuba.core.global.Security;
 import ke.hanan.onlinelibrarysystem.entity.Subject;
 import ke.hanan.onlinelibrarysystem.wrappers.ResponseWrapper;
 import org.springframework.stereotype.Service;
@@ -14,11 +15,17 @@ public class SubjectServiceBean implements SubjectService {
 
     @Inject
     private Persistence persistence;
+    @Inject
+    private Security security;
 
     @Override
     public ResponseWrapper createSubject(Subject subject) {
         ResponseWrapper response = new ResponseWrapper();
-
+        if(!security.isSpecificPermitted("app.createSubject")){
+            response.setCode(401);
+            response.setMessage("User doesn't have permissions to Create Subject");
+            return response;
+        }
         try(Transaction tx = persistence.createTransaction()){
 
             EntityManager em = persistence.getEntityManager();

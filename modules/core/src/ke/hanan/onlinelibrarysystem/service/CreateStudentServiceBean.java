@@ -4,6 +4,7 @@ import com.haulmont.cuba.core.EntityManager;
 import com.haulmont.cuba.core.Persistence;
 import com.haulmont.cuba.core.Transaction;
 import com.haulmont.cuba.core.global.PasswordEncryption;
+import com.haulmont.cuba.core.global.Security;
 import ke.hanan.onlinelibrarysystem.entity.Students;
 import ke.hanan.onlinelibrarysystem.wrappers.ResponseWrapper;
 import org.springframework.stereotype.Service;
@@ -16,12 +17,18 @@ public class CreateStudentServiceBean implements CreateStudentService {
     @Inject
     private Persistence persistence;
     @Inject
+    private Security security;
+    @Inject
     private PasswordEncryption passwordEncryption;
 
     @Override
     public ResponseWrapper createStudent(Students students) {
         ResponseWrapper response = new ResponseWrapper();
-
+        if(!security.isSpecificPermitted("app.createStudent")){
+            response.setCode(401);
+            response.setMessage("User doesn't have permissions to Create Student");
+            return response;
+        }
         try (Transaction tx = persistence.createTransaction()){
             EntityManager em = persistence.getEntityManager();
             persistence.getEntityManager().persist(students);

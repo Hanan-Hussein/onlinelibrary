@@ -7,8 +7,12 @@
         <class>ke.hanan.onlinelibrarysystem.entity.Subject</class>
         <class>ke.hanan.onlinelibrarysystem.entity.Students</class>
         <class>ke.hanan.onlinelibrarysystem.entity.Admin</class>
-        <class>ke.hanan.onlinelibrarysystem.entity.Librarian</class>
         <class>ke.hanan.onlinelibrarysystem.entity.Book</class>
         <class>ke.hanan.onlinelibrarysystem.entity.JournalArticle</class>
+        <class>ke.hanan.onlinelibrarysystem.entity.Otp</class>
+        <class>ke.hanan.onlinelibrarysystem.entity.Librarians</class>
+        <class>ke.hanan.onlinelibrarysystem.entity.WorkGroups</class>
+        <class>ke.hanan.onlinelibrarysystem.entity.WorkGroupRoles</class>
+        <class>ke.hanan.onlinelibrarysystem.entity.BookRequest</class>
     </persistence-unit>
 </persistence>

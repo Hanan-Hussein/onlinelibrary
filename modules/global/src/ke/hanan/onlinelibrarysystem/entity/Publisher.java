@@ -16,8 +16,19 @@ public class Publisher extends StandardEntity {
     @Column(name = "PUBLISHER_NAME")
     private String publisherName;
 
+    @Column(name = "CODE")
+    private String code;
+
     @Column(name = "DESCRIPTION")
     private String description;
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
 
     public String getDescription() {
         return description;

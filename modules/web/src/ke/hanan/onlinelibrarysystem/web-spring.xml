@@ -19,6 +19,36 @@
                        value="ke.hanan.onlinelibrarysystem.service.PublisherService"/>
                 <entry key="onlinelibrarysystem_SubjectService"
                        value="ke.hanan.onlinelibrarysystem.service.SubjectService"/>
+                <entry key="onlinelibrarysystem_CreateAuthorService"
+                       value="ke.hanan.onlinelibrarysystem.service.CreateAuthorService"/>
+                <entry key="onlinelibrarysystem_CreateAdminService"
+                       value="ke.hanan.onlinelibrarysystem.service.CreateAdminService"/>
+                <entry key="onlinelibrarysystem_CreateMasterDataService"
+                       value="ke.hanan.onlinelibrarysystem.service.CreateMasterDataService"/>
+                <entry key="onlinelibrarysystem_DeleteMasterDataService"
+                       value="ke.hanan.onlinelibrarysystem.service.DeleteMasterDataService"/>
+                <entry key="onlinelibrarysystem_CreateLibrarianService"
+                       value="ke.hanan.onlinelibrarysystem.service.CreateLibrarianService"/>
+                <entry key="onlinelibrarysystem_CreateWorkGroupService"
+                       value="ke.hanan.onlinelibrarysystem.service.CreateWorkGroupService"/>
+                <entry key="onlinelibrarysystem_DeleteBooksService"
+                       value="ke.hanan.onlinelibrarysystem.service.DeleteBooksService"/>
+                <entry key="onlinelibrarysystem_DeleteStudentService"
+                       value="ke.hanan.onlinelibrarysystem.service.DeleteStudentService"/>
+                <entry key="onlinelibrarysystem_DeleteLibrarianService"
+                       value="ke.hanan.onlinelibrarysystem.service.DeleteLibrarianService"/>
+                <entry key="onlinelibrarysystem_UserInfoService"
+                       value="ke.hanan.onlinelibrarysystem.service.UserInfoService"/>
+                <entry key="onlinelibrarysystem_CreateBooksService"
+                       value="ke.hanan.onlinelibrarysystem.service.CreateBooksService"/>
+                <entry key="onlinelibrarysystem_CreateBookRequestService"
+                       value="ke.hanan.onlinelibrarysystem.service.CreateBookRequestService"/>
+                <entry key="onlinelibrarysystem_DisableUserService"
+                       value="ke.hanan.onlinelibrarysystem.service.DisableUserService"/>
+                <entry key="onlinelibrarysystem_DeleteWorkGroupService"
+                       value="ke.hanan.onlinelibrarysystem.service.DeleteWorkGroupService"/>
+                <entry key="onlinelibrarysystem_ChangePasswordService"
+                       value="ke.hanan.onlinelibrarysystem.service.ChangePasswordService"/>
             </map>
         </property>
     </bean>

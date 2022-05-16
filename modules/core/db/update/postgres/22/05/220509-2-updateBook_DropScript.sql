@@ -1,0 +1,1 @@
+alter table ONLINELIBRARYSYSTEM_BOOK drop column EDITION_NUMBER__U91378 cascade ;
